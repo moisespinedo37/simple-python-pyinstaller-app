@@ -18,6 +18,17 @@ pipeline {
                 }
             }
         }
+
+        stage('Deliver'){
+            steps {
+                bat 'pyinstaller --onefile sources/add2vals.py'
+            }
+            post {
+                success {
+                   archiveArtifacts 'dist/add2vals'
+                }
+            }
+        }
         
     }
 }
