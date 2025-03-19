@@ -25,7 +25,7 @@ pipeline {
             }
             post {
                 success {
-                   archiveArtifacts 'dist/add2vals.exe'
+                   archiveArtifacts 'dist/add2vals.exe' // en Linux o macosx solo coloquen 'dist/add2vals'
                 }
             }
         }
