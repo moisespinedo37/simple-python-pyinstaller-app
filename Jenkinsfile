@@ -1,5 +1,8 @@
 pipeline {
     agent any 
+    environment {
+        PATCH = "/usr/bin:$PATH"
+    }
     stages {
         stage('Build') { 
             steps {
